@@ -1,0 +1,37 @@
+extends ../shared/template
+
+block content
+
+  #functionSpecificTrainingPage
+
+    h1= title
+
+    .textBox
+
+      p
+      | Function Specific Training provides a more in-depth look at the
+      | regulatory knowledge for the trainee’s particular job. Different
+      | jobs require different training. Drivers, for example, would need
+      | to be trained in the following areas—
+
+      ol
+        li How to read shipping documents to identify hazardous materials
+        li How to determine if the shipping papers match the product being transported
+        li How to properly stow the shipping papers during transport
+        li Determining placarding requirements
+        li How and when to apply and remove placards
+        li How to identify proper and improper labeling
+        li Identifying proper loading and securement of the product
+        li Determine what to do with damaged products
+        li How to plan a proper route for your trip
+        li Proper instruction for dealing with railroad crossings, tunnels and fires
+        li Instructions for attending the vehicle during transit
+        li Making sure the vehicle is in proper condition
+
+      | (Wow! That’s a lot to know!)
+
+    .arrows
+      .prev
+        a(href='/training/general-awareness') Prev
+      .next
+        a(href='/training/safety') Next

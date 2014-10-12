@@ -1,0 +1,37 @@
+extends ../shared/template
+
+block content
+
+  #trainingTypePage
+
+    h1= title
+
+    .textBox
+
+      p
+      | Hazmat employers are responsible for providing the appropriate
+      | training, which must take place prior to a new employee being
+      | unsupervised in the handling of hazmat or within 90 days of
+      | employment.
+
+      | The training must cover five general areas;
+
+      ol
+        li
+          a(href='/training/general-awareness') General Awareness/Familiarization Training
+        li
+          a(href='/training/function-specific') Function Specific Training
+        li
+          a(href='/training/safety') Safety Training
+        li
+          a(href='/training/security-awareness') Security Awareness Training
+        li
+          a(href='/training/in-depth-security') In Depth Security Training—(if company is required to have a security plan)
+
+      | Let’s take a brief look at what each section of training entails—
+
+    .arrows
+      .prev
+        a(href='/training-who') Prev
+      .next
+        a(href='/training/general-awareness') Next
