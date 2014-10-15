@@ -1,29 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Lilita+One);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
 html, body {
-  // width: 100%;
-  // height: 100%;
-  width: 842px;
-  height: 637px;
+  width: 100%;
+  height: 100%;
+  // width: 842px;
+  // height: 637px;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .95em;
 }
 
-// #appContainer {
-//   width: 842px;
-//   height: 637px;
-//   overflow: scroll;
-//
-// }
+#home {
+  position: absolute;
+  width: 100%;
+  height: 5%;
+  top: 8%;
+  left: 12%;
+  z-index: 99;
+}
 
-// nav {
-//   float: right;
-//   margin: 2% 15% 0 0;
-//   position: relative;
-//   z-index: 99;
-//   line-height: 285%;
-//
-//   ul {
-//     list-style-type: none;
-//   }
-// }
+.homeButton {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url('/img/home.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 
 #indexPage,
 #historyPage,
@@ -38,7 +44,7 @@ html, body {
 #trainingWhenPage {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
 }
@@ -87,29 +93,149 @@ html, body {
   background-image: url('/img/page-10.png');
 }
 
-h1 {
+h1{
   width: 80%;
-  padding: 5%;
+  margin: 7% 0 0 3%;
+  padding: 5% 5% 0 5%;
   position: relative;
   text-align: center;
+  color: #449388;
+  font-family: 'Lilita One', cursive;
+  font-size: 2.4em;
 }
 
-.textBox, .arrows {
-  width: 70%;
+.textBox,
+.textBoxIndex,
+.contentBoxHistory,
+.contentBoxToday,
+.contentBoxAwareness,
+.contentBoxTrainingWhen,
+.contentBoxTrainingDepthSecurity,
+.contentBoxTrainingSecurity,
+.contentBoxTrainingSafety {
+  width: 65%;
   padding: 0 2%;
-  margin: 0 10%;
+  margin: 1% 0 1% 15%;
   position: relative;
   overflow: scroll;
   z-index: 99;
 }
 
+.textBoxIndex {
+  line-height: 150%;
+  font-size: 1.5em;
+}
+
+.contentBoxHistory,
+.contentBoxToday,
+.contentBoxAwareness,
+.contentBoxTrainingWhen,
+.contentBoxTrainingDepthSecurity,
+.contentBoxTrainingSecurity,
+.contentBoxTrainingSafety {
+  height: 30%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contentBoxHistory {
+  background-image: url('/img/hazmat-history.JPG');
+}
+
+.contentBoxToday {
+  background-image: url('/img/hazmat-today.jpg');
+}
+
+.contentBoxAwareness {
+  background-image: url('/img/hazmat-awareness.jpeg');
+}
+
+.contentBoxTrainingWhen {
+  background-image: url('/img/hazmatOften.gif');
+}
+
+.contentBoxTrainingDepthSecurity {
+  background-image: url('/img/hazmatSecurity2.jpg');
+}
+
+.contentBoxTrainingSecurity {
+  background-image: url('/img/hazmatSecurity.jpg');
+}
+
+// .contentBoxTrainingSafety {
+//   background-image: url('/img/hazmat-today.jpg');
+// }
+
 .arrows {
-  bottom: 0;
+  bottom: 25%;
+  width: 75%;
+  height: 15%;
+  margin: 0 0 0 12%;
+  position: absolute;
   display: block;
   text-align: center;
+  z-index: 99;
 }
 
 .prev, .next {
+  width: 32px;
+  height: 32px;
   display: inline-block;
-  margin: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.prev {
+  float: left;
+  background-image: url('/img/prevArrow.png');
+
+}
+
+.next {
+  float: right;
+  background-image: url('/img/nextArrow.png');
+}
+
+/***************************************************
+Responsive
+***************************************************/
+
+@media screen and (min-width: 900px) {
+
+  h1, .arrows {
+    text-align: left;
+    padding-left: 20%;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+  .textBox,
+  .contentBoxHistory,
+  .contentBoxToday,
+  .contentBoxAwareness {
+    width: 45%;
+    margin: 1% 8%;
+  }
+
+  // .arrows {
+  //   width: 65%;
+  // }
+
+
+}
+
+@media screen and (min-width: 1300px) {
+
+  .textBox,
+  .arrows,
+  .contentBoxHistory,
+  .contentBoxToday,
+  .contentBoxAwareness {
+    width: 35%;
+    margin: 1% 5%;
+  }
+
 }
